@@ -1,0 +1,45 @@
+/*  * Always set the map height explicitly to define the size of the div element * that contains the map.  */ 
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Set background to almost pure black */
+}
+
+#videoContainer {
+  max-width: 50%; /* Restrict video to max 50% of the width */
+}
+
+#videoPlayer {
+  width: 100%;
+  height: auto; /* Keep video responsive within its container */
+}
+
+#controls {
+  background: #111; /* Slightly lighter than black for contrast */
+  color: #fff; /* White text for readability */
+  padding: 10px;
+  text-align: center;
+}
+
+#controls button, #controls select {
+  background: #222; /* Dark background for buttons */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#controls button:hover, #controls select:hover {
+  background: #555; /* Lighter dark on hover */
+}
+
+#frameCounter {
+  margin-bottom: 10px;
+}

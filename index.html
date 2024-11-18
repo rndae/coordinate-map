@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Animation</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./papaparse.min.js"></script>
+    <script type="module" src="./index.js"></script>
+    <style>
+        body { display: flex; }
+        #map { flex: 1; }
+        #videoContainer { flex: 1; max-width: 50%; }  /* Restrict video to max 50% of the width */
+        #videoPlayer { width: 100%; height: auto; }  /* Keep video responsive within its container */
+        #controls { background: rgba(10, 10, 10, 0.8); padding: 10px; text-align: center; }
+        #controls { position: relative; }  /* Position controls under the video */
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="videoContainer">
+        <video id="videoPlayer" controls loop>
+            <source src="test-to-coordinates.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="controls">
+            <div id="frameCounter">Frame: 0</div>
+            <select id="csvSelector">
+                <option value="updated_data_with_speeds.csv">updated_data_with_speeds.csv</option>
+                <option value="distance-test-10-mfp-4p-ra2-impr.csv">distance-test-10-mfp-4p-ra2-impr.csv</option>
+                <option value="test-10-mfp-4p-ra2-impr.csv">test-10-mfp-4p-ra2-impr.csv</option>
+                <option value="test-9-mfp-4p-ra2.csv">test-9-mfp-4p-ra2.csv</option>
+                <option value="test-8-mfp-16p-ra2.csv">test-8-mfp-16p-ra2.csv</option>
+                <option value="test-5-mfp-12p-64.csv">test-5-mfp-12p-64.csv</option>
+                <option value="test-2-64-precision-coordinates.csv">test-2-64-precision-coordinates.csv</option>
+            </select>
+            <button id="prevFrame">Previous Frame</button>
+            <button id="nextFrame">Next Frame</button>
+            <button id="skipBack">Skip Back 30 Frames</button>
+            <button id="skipForward">Skip Forward 30 Frames</button>
+            <button id="playPauseButton">Play</button>
+        </div>
+    </div>
+    <script src="link with key here" defer></script>
+</body>
+</html>
